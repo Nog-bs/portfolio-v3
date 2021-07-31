@@ -23,7 +23,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
             href={link}
         >
             <Button
-                fontSize="0.75rem"
+                fontSize={{ base: "0.65rem", md: "0.85rem", xl: "0.85rem" }}
                 width={{ base: "72px", md: "100px", xl: "125px" }}
                 colorScheme={theme}
                 leftIcon={<Icon />}

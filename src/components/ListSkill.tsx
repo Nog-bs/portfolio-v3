@@ -1,23 +1,33 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Collapse, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 interface ListSkillProps {
     text: string;
+    description?: string;
 }
 
-export const ListSkill: React.FC<ListSkillProps> = ({ text }) => {
+export const ListSkill: React.FC<ListSkillProps> = ({ text, description }) => {
+    const [show, setShow] = React.useState(false);
+
+    const handleToggle = () => setShow(!show);
     return (
         <Flex
-            alignItems="center"
-            borderRadius="8px"
-            bg="teal.400"
-            padding="4"
-            color="white"
+            textAlign="center"
+            bg="teal.200"
+            p="4"
+            borderRadius="8"
+            onClick={handleToggle}
             flexDirection="column"
+            width="100%"
         >
-            <Text as="h4" size="md">
+            <Heading as="h6" fontSize="1rem" fontWeight="500">
                 {text}
-            </Text>
+            </Heading>
+            <Collapse startingHeight={0} in={show}>
+                <Text textAlign="justify" fontSize="0.85rem">
+                    {description}
+                </Text>
+            </Collapse>
         </Flex>
     );
 };

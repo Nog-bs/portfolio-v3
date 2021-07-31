@@ -1,4 +1,4 @@
-import { Image, HStack } from "@chakra-ui/react";
+import { Image, HStack, Box } from "@chakra-ui/react";
 import React from "react";
 import profileImage from "../assets/images/standing-pic edit.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { Layout } from "../components/Layout";
 import { ParagraphContainer } from "../components/ParagraphContainer";
 import { SocialButton } from "../components/SocialButton";
 import { TopHeader } from "../components/TopHeader";
+import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 
 interface HeroProps {}
 
@@ -60,6 +61,9 @@ export const Hero: React.FC<HeroProps> = () => {
                     theme="red"
                 />
             </HStack>
+            <Box position="absolute" top="2" right="2">
+                <ColorModeSwitcher />
+            </Box>
         </Layout>
     );
 };
