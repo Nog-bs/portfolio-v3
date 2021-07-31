@@ -1,22 +1,21 @@
-import { Box, Heading, Image, HStack } from "@chakra-ui/react";
+import { Box, Image, HStack } from "@chakra-ui/react";
 import React from "react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { ParagraphContainer } from "./ParagraphContainer";
 import profileImage from "../assets/images/standing-pic edit.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsPen } from "react-icons/bs";
-import { SocialButton } from "./SocialButton";
-import { Layout } from "./Layout";
+import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
+import { Layout } from "../components/Layout";
+import { ParagraphContainer } from "../components/ParagraphContainer";
+import { SocialButton } from "../components/SocialButton";
+import { TopHeader } from "../components/TopHeader";
 
 interface HeroProps {}
 
 export const Hero: React.FC<HeroProps> = () => {
     return (
         <Layout>
-            <Heading as="h1" fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}>
-                Edro Gonzales
-            </Heading>
+            <TopHeader>Edro Gonzales</TopHeader>
             <ParagraphContainer text='Hi, my name is Edro - thats "Pedro" but without the "P". Moving on from the specifics, I am a passionate developer that transitioned to tech August of 2020.' />
             <ParagraphContainer
                 text="Previously, I had come from a sales background whilst also pursuing a business education at Simon Fraser University. However, I felt my passions align more with what I was
@@ -47,19 +46,19 @@ export const Hero: React.FC<HeroProps> = () => {
                     link="https://github.com/Nog-bs"
                     text="Github"
                     Icon={FaGithub}
-                    theme="blue"
+                    theme="teal"
                 />
                 <SocialButton
                     link="mailto:edrogonzales@gmail.com"
                     text="Email"
                     Icon={AiOutlineMail}
-                    theme="twitter"
+                    theme="orange"
                 />
                 <SocialButton
                     link="https://resume.io/r/5cLy7fyZN"
                     text="Resume"
                     Icon={BsPen}
-                    theme="twitter"
+                    theme="red"
                 />
             </HStack>
             <Box position="absolute" top="1" right="1">
