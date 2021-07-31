@@ -1,10 +1,9 @@
-import { Box, Image, HStack } from "@chakra-ui/react";
+import { Image, HStack } from "@chakra-ui/react";
 import React from "react";
 import profileImage from "../assets/images/standing-pic edit.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsPen } from "react-icons/bs";
-import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 import { Layout } from "../components/Layout";
 import { ParagraphContainer } from "../components/ParagraphContainer";
 import { SocialButton } from "../components/SocialButton";
@@ -61,9 +60,6 @@ export const Hero: React.FC<HeroProps> = () => {
                     theme="red"
                 />
             </HStack>
-            <Box position="absolute" top="1" right="1">
-                <ColorModeSwitcher />
-            </Box>
         </Layout>
     );
 };
