@@ -7,10 +7,10 @@ interface ProjectsProps {}
 
 export const Projects: React.FC<ProjectsProps> = () => {
     return (
-        <Layout>
+        <Layout layoutSize="fit-content">
             <TopHeader>Projects</TopHeader>
-            <SimpleGrid column={2} spacing={2}>
-                <Box bg="teal.200" borderRadius="8" padding="6" height="300px">
+            <SimpleGrid column={2} spacing={4}>
+                <Box borderRadius="8" height="300px">
                     <Heading as="h3" fontSize="0.85rem">
                         Project Name
                     </Heading>

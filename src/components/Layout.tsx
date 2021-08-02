@@ -1,23 +1,18 @@
 import { Center, Flex } from "@chakra-ui/react";
 import React from "react";
 
-type LayoutSize = "regular" | "small";
-
 interface LayoutProps {
-    layoutSize?: LayoutSize;
+    layoutSize?: string;
     backgroundColor?: string;
 }
 
 export const Layout: React.FC<LayoutProps> = ({
-    layoutSize = "regular",
+    layoutSize = "100vh",
     backgroundColor,
     children,
 }) => {
     return (
-        <Center
-            bg={backgroundColor}
-            height={layoutSize === "small" ? "50vh" : "100vh"}
-        >
+        <Center p="8" bg={backgroundColor} height={layoutSize}>
             <Flex
                 width={{ base: "300px", md: "420px", lg: "500px" }}
                 flexDirection="column"
