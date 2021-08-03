@@ -27,6 +27,7 @@ export const ListSkill: React.FC<ListSkillProps> = ({
             onClick={handleToggle}
             flexDirection="column"
             width="100%"
+            height="fit-content"
         >
             <Flex flexDirection="row" alignItems="center">
                 <Icon fontSize="1.5rem" />
@@ -44,7 +45,7 @@ export const ListSkill: React.FC<ListSkillProps> = ({
                 </Text>
             </Flex>
             <Collapse startingHeight={0} in={show}>
-                <Text mt="2" textAlign="left" fontSize="0.85rem">
+                <Text mt="4" textAlign="justify" fontSize="0.85rem">
                     {description}
                 </Text>
             </Collapse>

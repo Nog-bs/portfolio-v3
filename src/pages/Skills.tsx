@@ -12,7 +12,7 @@ interface SkillsProps {}
 export const Skills: React.FC<SkillsProps> = () => {
     return (
         <Layout layoutSize="fit-content">
-            <TopHeader>Technical Toolkit</TopHeader>
+            <TopHeader>Main Toolkit</TopHeader>
             <SimpleGrid columns={[1, 1, 2]} spacing="12px">
                 <ListSkill
                     text="Node.js"
