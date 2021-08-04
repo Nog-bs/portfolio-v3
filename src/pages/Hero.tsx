@@ -1,32 +1,24 @@
-import { Box, Image, HStack } from "@chakra-ui/react";
+import { Image, HStack, Box } from "@chakra-ui/react";
 import React from "react";
 import profileImage from "../assets/images/standing-pic edit.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsPen } from "react-icons/bs";
-import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 import { Layout } from "../components/Layout";
 import { ParagraphContainer } from "../components/ParagraphContainer";
 import { SocialButton } from "../components/SocialButton";
 import { TopHeader } from "../components/TopHeader";
+import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 
 interface HeroProps {}
 
 export const Hero: React.FC<HeroProps> = () => {
     return (
         <Layout>
-            <TopHeader>Edro Gonzales</TopHeader>
-            <ParagraphContainer text='Hi, my name is Edro - thats "Pedro" but without the "P". Moving on from the specifics, I am a passionate developer that transitioned to tech August of 2020.' />
-            <ParagraphContainer
-                text="Previously, I had come from a sales background whilst also pursuing a business education at Simon Fraser University. However, I felt my passions align more with what I was
-                    seeing in the tech scene and specifically development."
-            />
-            <ParagraphContainer
-                text="
-                    I am currently a graduate from the BrainStation Web
-                    Development program and currently spend my free time working
-                    on TypeScript projects and learning what's trendy."
-            />
+            <TopHeader>Edro Gonzales | Software Developer</TopHeader>
+            <ParagraphContainer text='Hi, my name is Edro - thats "Pedro" but without the "P". Moving on from the specifics, I am a passionate developer that performed my first console.log("Hello World") in August 2020.' />
+            <ParagraphContainer text="Previously, I had come from a sales background whilst also pursuing a business education at Simon Fraser University. However, I felt my passions align more with ripping my hair out trying to learn a new framework every week so I became a developer." />
+            <ParagraphContainer text="I am currently a graduate from the BrainStation Web Development program and currently spend my freetime leveling up my projects so I can be cool enough to join professional development teams." />
             <Image
                 margin="auto"
                 borderRadius="full"
@@ -61,7 +53,7 @@ export const Hero: React.FC<HeroProps> = () => {
                     theme="red"
                 />
             </HStack>
-            <Box position="absolute" top="1" right="1">
+            <Box position="absolute" top="2" right="2">
                 <ColorModeSwitcher />
             </Box>
         </Layout>
