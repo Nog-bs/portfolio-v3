@@ -15,7 +15,6 @@ export const Projects: React.FC<ProjectsProps> = () => {
         <Layout layoutSize="fit-content">
             <TopHeader>Projects</TopHeader>
             <SimpleGrid column={2} spacing={4}>
-                {/* <ProjectCard /> */}
                 <OSWindow
                     github="https://github.com/Nog-bs/lireddit"
                     link="https://edrohello.xyz/"
