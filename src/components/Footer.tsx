@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 </Link>
             </Flex>
             <Text mt="2" fontSize="0.6rem">
-                Copyright © 2021 Edro Gonzales | Made with React.js
+                Copyright © 2021 Edro Gonzales | Made with TypeScript and React
             </Text>
         </Center>
     );
