@@ -20,16 +20,22 @@ export const Footer: React.FC<FooterProps> = () => {
                 <Link
                     m="1"
                     target="_blank"
+                    rel="noreferrer"
                     href="https://www.linkedin.com/in/edrogonzales/"
                 >
                     <FaLinkedin fontSize="1.5rem" />
                 </Link>
-                <Link m="1" target="_blank" href="https://github.com/Nog-bs">
+                <Link 
+                    m="1" 
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/Nog-bs">
                     <FaGithub fontSize="1.5rem" />
                 </Link>
                 <Link
                     m="1"
                     target="_blank"
+                    rel="noreferrer"
                     href="mailto:edrogonzales@gmail.com"
                 >
                     <AiOutlineMail fontSize="1.5rem" />
