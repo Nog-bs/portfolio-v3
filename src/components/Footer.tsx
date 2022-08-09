@@ -37,6 +37,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 <Link
                     m="1"
                     target="_blank"
+                    rel="noreferrer"
                     href={PDFResume}
                     download="edro-gonzales-resume.pdf"
                 >
