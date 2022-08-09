@@ -6,6 +6,7 @@ interface SocialButtonProps {
     theme: string;
     link: string;
     text: string;
+    download?: string,
     Icon: IconType;
 }
 
@@ -13,6 +14,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
     theme,
     link,
     text,
+    download,
     Icon,
 }) => {
     return (
@@ -21,6 +23,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
             target="_blank"
             rel="noreferrer"
             href={link}
+            download={download}
         >
             <Button
                 fontSize={{ base: "0.65rem", md: "0.85rem", xl: "0.85rem" }}

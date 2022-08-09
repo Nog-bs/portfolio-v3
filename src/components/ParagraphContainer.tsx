@@ -10,7 +10,7 @@ export const ParagraphContainer: React.FC<ParagraphContainerProps> = ({
 }) => {
     return (
         <Text
-            fontSize={{ base: "xs", md: "md", lg: "md" }}
+            fontSize={{ base: "xs", md: "sm", lg: "sm" }}
             textAlign="justify"
             marginBottom="4"
         >

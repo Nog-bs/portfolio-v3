@@ -1,6 +1,7 @@
-import { Image, HStack, Box } from "@chakra-ui/react";
+import { Image, HStack, Box, Text } from "@chakra-ui/react";
 import React from "react";
 import profileImage from "../assets/images/standing-pic edit.jpg";
+import PDFResume from '../assets/pdf/edro-gonzales-resume.pdf'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsPen } from "react-icons/bs";
@@ -10,15 +11,13 @@ import { SocialButton } from "../components/SocialButton";
 import { TopHeader } from "../components/TopHeader";
 import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 
-interface HeroProps {}
-
-export const Hero: React.FC<HeroProps> = () => {
+export const Hero: React.FC = () => {
+    const PDFLink = PDFResume
     return (
         <Layout>
-            <TopHeader>Edro Gonzales | Software Developer</TopHeader>
-            <ParagraphContainer text='Hi, my name is Edro - thats "Pedro" but without the "P". Moving on from the specifics, I am a passionate developer that performed my first console.log("Hello World") in August 2020.' />
-            <ParagraphContainer text="Previously, I had come from a sales background whilst also pursuing a business education at Simon Fraser University. However, I felt my passions align more with ripping my hair out trying to learn a new framework every week so I became a developer." />
-            <ParagraphContainer text="I am currently a graduate from the BrainStation Web Development program and currently spend my freetime leveling up my projects so I can be cool enough to join professional development teams." />
+            <TopHeader>Hi, my name is Edro Gonzales "edge-row" and I am a <Text as="span" color="teal">Software Engineer</Text></TopHeader>
+            <ParagraphContainer text='The easiest way to remember my name is thinking of the name "Pedro" but taking out the "P". Now that we got the introductions out of the way, this page is just a brief overview of my history into tech since the year 2020.' />
+            <ParagraphContainer text="I had been at the Beedie School of Business at Simon Fraser University from the periods 2018 until 2020 wherein that year I had decided to start my journey as a self-taught developer. As someone who comes from a self-taught background with bootcamp experience, my self-starter attitude and ability to learn on the fly allowed me to intern as a Junior Software Developer at Machobear from 2021 until this year." /> <ParagraphContainer text="Currently, now that I have more hands-on experience and a better understanding of the tech industry I want to be able to not only hone my fundamentals as an engineer but also develop meaningful products in an industry where possibly millions can instantly view/experience something I coded." />
             <Image
                 margin="auto"
                 borderRadius="full"
@@ -47,7 +46,8 @@ export const Hero: React.FC<HeroProps> = () => {
                     theme="orange"
                 />
                 <SocialButton
-                    link="https://resume.io/r/5cLy7fyZN"
+                    link={PDFLink}
+                    download="edro-gonzales-resume.pdf"
                     text="Resume"
                     Icon={BsPen}
                     theme="red"
